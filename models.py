@@ -18,6 +18,9 @@ class User(db.Model,SerializerMixin):
     _password_hash = db.Column(db.String,nullable=False)
     car  = db.relationship('Car',backref='user')
 
+
+
+
     def __repr__(self):
         return f'user {self.name} has been created'
 
